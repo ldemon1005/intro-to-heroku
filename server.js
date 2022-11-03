@@ -26,6 +26,8 @@ var brokerTable = 'broker__c';
 
 // setup the demo data if needed
 client.query('SELECT * FROM salesforce.broker__c', function(error, data) {
+  console.log('error: ', error);
+  console.log('data: ', data);
   if (error !== null) {
     client.query('SELECT * FROM broker__c', function(error, data) {
       if (error !== null) {
